@@ -1,0 +1,172 @@
+Reporte de Correlacion: Reviews vs Redes Sociales
+=================================================
+
+RESUMEN EJECUTIVO:
+------------------
+Correlaciones significativas encontradas (|r| > 0.5, p < 0.05):
+- review_count_vs_mention_volume_instagram: 0.992
+- review_count_vs_mention_volume_tiktok: 0.989
+- review_count_vs_mention_volume_youtube: 0.966
+
+CORRELACIONES POR PLATAFORMA:
+-----------------------------
+
+review_count_vs_mention_volume_instagram:
+  Spearman: 0.992 (p-value: 0.000)
+  Pearson:  0.988 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion FUERTE positiva (ESTADISTICAMENTE SIGNIFICATIVA)
+
+sentiment_vs_engagement_instagram:
+  Spearman: 0.299 (p-value: 0.000)
+  Pearson:  0.274 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion MUY DEBIL positiva (ESTADISTICAMENTE SIGNIFICATIVA)
+
+rating_vs_engagement_instagram:
+  Spearman: -0.231 (p-value: 0.000)
+  Pearson:  -0.112 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion MUY DEBIL negativa (ESTADISTICAMENTE SIGNIFICATIVA)
+
+review_count_vs_mention_volume_tiktok:
+  Spearman: 0.989 (p-value: 0.000)
+  Pearson:  0.984 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion FUERTE positiva (ESTADISTICAMENTE SIGNIFICATIVA)
+
+sentiment_vs_engagement_tiktok:
+  Spearman: 0.249 (p-value: 0.000)
+  Pearson:  0.272 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion MUY DEBIL positiva (ESTADISTICAMENTE SIGNIFICATIVA)
+
+rating_vs_engagement_tiktok:
+  Spearman: -0.261 (p-value: 0.000)
+  Pearson:  -0.130 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion MUY DEBIL negativa (ESTADISTICAMENTE SIGNIFICATIVA)
+
+review_count_vs_mention_volume_youtube:
+  Spearman: 0.966 (p-value: 0.000)
+  Pearson:  0.990 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion FUERTE positiva (ESTADISTICAMENTE SIGNIFICATIVA)
+
+sentiment_vs_engagement_youtube:
+  Spearman: 0.332 (p-value: 0.000)
+  Pearson:  0.236 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion DEBIL positiva (ESTADISTICAMENTE SIGNIFICATIVA)
+
+rating_vs_engagement_youtube:
+  Spearman: -0.141 (p-value: 0.000)
+  Pearson:  -0.050 (p-value: 0.000)
+  Muestra:  5317 puntos
+  Interpretacion: Correlacion MUY DEBIL negativa (ESTADISTICAMENTE SIGNIFICATIVA)
+
+IMPACTO DE HASHTAGS:
+--------------------
+Top hashtags por engagement: #beautyproducts, #makeup, #sephora, #perfume, #beautytips, #beautyblogger, #fragrance, #cosmetics, #skincare, #beauty
+
+Hashtag: #beautyproducts
+  Reviews que mencionan: 3
+  Rating promedio (con keyword): 5.00
+  Rating promedio (sin keyword): 4.30
+  Diferencia en rating: +0.70
+  Sentimiento promedio (con keyword): 0.621
+  Sentimiento promedio (sin keyword): 0.453
+  Diferencia en sentimiento: +0.167
+
+Hashtag: #makeup
+  Reviews que mencionan: 127107
+  Rating promedio (con keyword): 4.46
+  Rating promedio (sin keyword): 4.28
+  Diferencia en rating: +0.18
+  Sentimiento promedio (con keyword): 0.499
+  Sentimiento promedio (sin keyword): 0.447
+  Diferencia en sentimiento: +0.052
+
+Hashtag: #sephora
+  Reviews que mencionan: 30555
+  Rating promedio (con keyword): 4.21
+  Rating promedio (sin keyword): 4.30
+  Diferencia en rating: -0.09
+  Sentimiento promedio (con keyword): 0.452
+  Sentimiento promedio (sin keyword): 0.453
+  Diferencia en sentimiento: -0.001
+
+Hashtag: #perfume
+  Reviews que mencionan: 4934
+  Rating promedio (con keyword): 3.83
+  Rating promedio (sin keyword): 4.30
+  Diferencia en rating: -0.47
+  Sentimiento promedio (con keyword): 0.473
+  Sentimiento promedio (sin keyword): 0.453
+  Diferencia en sentimiento: +0.019
+
+Hashtag: #beautyblogger
+  Reviews que mencionan: 6
+  Rating promedio (con keyword): 5.00
+  Rating promedio (sin keyword): 4.30
+  Diferencia en rating: +0.70
+  Sentimiento promedio (con keyword): 0.608
+  Sentimiento promedio (sin keyword): 0.453
+  Diferencia en sentimiento: +0.155
+
+Hashtag: #fragrance
+  Reviews que mencionan: 32551
+  Rating promedio (con keyword): 4.15
+  Rating promedio (sin keyword): 4.30
+  Diferencia en rating: -0.16
+  Sentimiento promedio (con keyword): 0.496
+  Sentimiento promedio (sin keyword): 0.452
+  Diferencia en sentimiento: +0.044
+
+Hashtag: #cosmetics
+  Reviews que mencionan: 3308
+  Rating promedio (con keyword): 4.46
+  Rating promedio (sin keyword): 4.30
+  Diferencia en rating: +0.16
+  Sentimiento promedio (con keyword): 0.541
+  Sentimiento promedio (sin keyword): 0.453
+  Diferencia en sentimiento: +0.088
+
+Hashtag: #skincare
+  Reviews que mencionan: 53276
+  Rating promedio (con keyword): 4.51
+  Rating promedio (sin keyword): 4.29
+  Diferencia en rating: +0.22
+  Sentimiento promedio (con keyword): 0.509
+  Sentimiento promedio (sin keyword): 0.451
+  Diferencia en sentimiento: +0.058
+
+Hashtag: #beauty
+  Reviews que mencionan: 20207
+  Rating promedio (con keyword): 4.51
+  Rating promedio (sin keyword): 4.30
+  Diferencia en rating: +0.21
+  Sentimiento promedio (con keyword): 0.562
+  Sentimiento promedio (sin keyword): 0.451
+  Diferencia en sentimiento: +0.111
+
+
+ANALISIS DE SERIES TEMPORALES:
+------------------------------
+Plataforma: instagram
+  Mejor lag: 0 dias
+  Correlacion en mejor lag: 0.992
+Plataforma: tiktok
+  Mejor lag: 0 dias
+  Correlacion en mejor lag: 0.989
+Plataforma: youtube
+  Mejor lag: 0 dias
+  Correlacion en mejor lag: 0.966
+
+RECOMENDACIONES:
+----------------
+- Se encontraron 3 correlaciones fuertes significativas
+- Considera monitorear estas metricas para prediccion de ventas
+- Tiktok muestra correlaciones moderadas, buena plataforma para campañas
+- Instagram muestra correlaciones moderadas, buena plataforma para campañas
+- Youtube muestra correlaciones moderadas, buena plataforma para campañas
