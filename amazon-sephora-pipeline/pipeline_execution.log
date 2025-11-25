@@ -1,0 +1,800 @@
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Iniciando descarga del dataset de Kaggle...
+ERROR:root:Error en la descarga: [WinError 2] El sistema no puede encontrar el archivo especificado
+ERROR:root:Error en pipeline: Command '['python', 'src/data_ingestion.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Iniciando descarga del dataset de Kaggle...
+ERROR:root:Error en la descarga: Command '['kaggle', 'datasets', 'download', 'nadyinky/sephora-products-and-skincare-reviews', '-p', 'data/raw', '--unzip']' returned non-zero exit status 1.
+ERROR:root:Error en pipeline: Command '['python', 'src/data_ingestion.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Encontrados 5 archivos de reseñas.
+INFO:root:Leyendo data/raw\reviews_0-250.csv...
+INFO:root:Leyendo data/raw\reviews_1250-end.csv...
+INFO:root:Leyendo data/raw\reviews_250-500.csv...
+INFO:root:Leyendo data/raw\reviews_500-750.csv...
+INFO:root:Leyendo data/raw\reviews_750-1250.csv...
+INFO:root:Total reseñas combinadas: 1094411 filas.
+INFO:root:Cargando información de productos...
+INFO:root:Productos cargados: 8494
+INFO:root: Reseñas combinadas con productos.
+INFO:root:Dataset combinado guardado en data/raw/sephora_reviews.csv
+ERROR:root:Error en pipeline: Command '['python', 'src/data_transformation.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Encontrados 5 archivos de reseñas.
+INFO:root:Leyendo data/raw\reviews_0-250.csv...
+INFO:root:Leyendo data/raw\reviews_1250-end.csv...
+INFO:root:Leyendo data/raw\reviews_250-500.csv...
+INFO:root:Leyendo data/raw\reviews_500-750.csv...
+INFO:root:Leyendo data/raw\reviews_750-1250.csv...
+INFO:root:Total reseñas combinadas: 1094411 filas.
+INFO:root:Cargando información de productos...
+INFO:root:Productos cargados: 8494
+INFO:root: Reseñas combinadas con productos.
+INFO:root:Dataset combinado guardado en data/raw/sephora_reviews.csv
+ERROR:root:Error en pipeline: Command '['python', 'src/data_transformation.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Encontrados 5 archivos de reseñas.
+INFO:root:Leyendo data/raw\reviews_0-250.csv...
+INFO:root:Leyendo data/raw\reviews_1250-end.csv...
+INFO:root:Leyendo data/raw\reviews_250-500.csv...
+INFO:root:Leyendo data/raw\reviews_500-750.csv...
+INFO:root:Leyendo data/raw\reviews_750-1250.csv...
+INFO:root:Total reseñas combinadas: 1094411 filas.
+INFO:root:Cargando información de productos...
+INFO:root:Productos cargados: 8494
+INFO:root: Reseñas combinadas con productos.
+INFO:root:Dataset combinado guardado en data/raw/sephora_reviews.csv
+INFO:root:Iniciando limpieza de datos...
+ERROR:root:Error en pipeline: Command '['python', 'src/data_transformation.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Encontrados 5 archivos de reseñas.
+INFO:root:Leyendo data/raw\reviews_0-250.csv...
+INFO:root:Leyendo data/raw\reviews_1250-end.csv...
+INFO:root:Leyendo data/raw\reviews_250-500.csv...
+INFO:root:Leyendo data/raw\reviews_500-750.csv...
+INFO:root:Leyendo data/raw\reviews_750-1250.csv...
+INFO:root:Total reseñas combinadas: 1094411 filas.
+INFO:root:Cargando información de productos...
+INFO:root:Productos cargados: 8494
+INFO:root: Reseñas combinadas con productos.
+INFO:root:Dataset combinado guardado en data/raw/sephora_reviews.csv
+INFO:root:Iniciando limpieza de datos...
+ERROR:root:Error en pipeline: Command '['python', 'src/data_transformation.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Encontrados 5 archivos de reseñas.
+INFO:root:Leyendo data/raw\reviews_0-250.csv...
+INFO:root:Leyendo data/raw\reviews_1250-end.csv...
+INFO:root:Leyendo data/raw\reviews_250-500.csv...
+INFO:root:Leyendo data/raw\reviews_500-750.csv...
+INFO:root:Leyendo data/raw\reviews_750-1250.csv...
+INFO:root:Total reseñas combinadas: 1094411 filas.
+INFO:root:Cargando información de productos...
+INFO:root:Productos cargados: 8494
+INFO:root: Reseñas combinadas con productos.
+INFO:root:Dataset combinado guardado en data/raw/sephora_reviews.csv
+INFO:root:Iniciando limpieza de datos...
+ERROR:root:Error en pipeline: Command '['python', 'src/data_transformation.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Encontrados 5 archivos de reseñas.
+INFO:root:Leyendo data/raw\reviews_0-250.csv...
+INFO:root:Leyendo data/raw\reviews_1250-end.csv...
+INFO:root:Leyendo data/raw\reviews_250-500.csv...
+INFO:root:Leyendo data/raw\reviews_500-750.csv...
+INFO:root:Leyendo data/raw\reviews_750-1250.csv...
+INFO:root:Total reseñas combinadas: 1094411 filas.
+INFO:root:Cargando información de productos...
+INFO:root:Productos cargados: 8494
+INFO:root: Reseñas combinadas con productos.
+INFO:root:Dataset combinado guardado en data/raw/sephora_reviews.csv
+INFO:root:Iniciando limpieza de datos...
+INFO:root:Datos limpios: 1092967 filas, 45 columnas.
+INFO:root:Calculando sentimiento...
+INFO:root:Enriqueciendo con información de productos...
+INFO:root:Creando agregaciones...
+INFO:root:Dataset procesado guardado en data/processed/processed_reviews.parquet
+INFO:root:Validando dataset procesado...
+ERROR:root:Error en pipeline: Command '['python', 'src/data_validation.py']' returned non-zero exit status 1.
+INFO:root:=== INICIO DEL PIPELINE ===
+INFO:root:Encontrados 5 archivos de reseñas.
+INFO:root:Leyendo data/raw\reviews_0-250.csv...
+INFO:root:Leyendo data/raw\reviews_1250-end.csv...
+INFO:root:Leyendo data/raw\reviews_250-500.csv...
+INFO:root:Leyendo data/raw\reviews_500-750.csv...
+INFO:root:Leyendo data/raw\reviews_750-1250.csv...
+INFO:root:Total reseñas combinadas: 1094411 filas.
+INFO:root:Cargando información de productos...
+INFO:root:Productos cargados: 8494
+INFO:root: Reseñas combinadas con productos.
+INFO:root:Dataset combinado guardado en data/raw/sephora_reviews.csv
+INFO:root:Iniciando limpieza de datos...
+INFO:root:Datos limpios: 1092967 filas, 45 columnas.
+INFO:root:Calculando sentimiento...
+INFO:root:Enriqueciendo con información de productos...
+INFO:root:Creando agregaciones...
+INFO:root:Dataset procesado guardado en data/processed/processed_reviews.parquet
+INFO:root:Iniciando validación de datos...
+INFO:root: Validación completada correctamente.
+INFO:root:Pipeline ejecutado correctamente.
+2025-11-24 10:11:46,318 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 10:11:46,319 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 10:11:46,807 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 10:11:46,807 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 10:11:46,807 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 10:11:48,946 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 10:11:48,946 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 10:11:49,182 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 10:11:49,182 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 10:11:50,023 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 10:11:50,023 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 10:11:50,496 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 10:11:50,496 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 10:11:50,983 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 10:11:51,029 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 10:11:51,130 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 10:11:51,535 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 10:12:12,547 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 10:12:12,625 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 10:12:12', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 10:12:12,848 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 10:12:12,848 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 10:12:14,284 - ERROR - Error en Transformacion y enriquecimiento de datos: C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Downloads\proyecto_final_ENDO\amazon-sephora-pipeline\src\data_transformation.py", line 4, in <module>
+    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+ModuleNotFoundError: No module named 'vaderSentiment'
+
+2025-11-24 10:12:14,284 - ERROR - Pipeline fallo. Duracion: 0:00:27.965463
+2025-11-24 10:35:35,252 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 10:35:35,253 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 10:35:35,625 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 10:35:35,625 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 10:35:35,625 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 10:35:37,764 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 10:35:37,764 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 10:35:37,982 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 10:35:37,982 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 10:35:38,784 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 10:35:38,784 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 10:35:39,272 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 10:35:39,272 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 10:35:39,775 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 10:35:39,830 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 10:35:39,918 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 10:35:40,392 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 10:36:01,506 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 10:36:01,586 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 10:36:01', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 10:36:01,825 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 10:36:01,825 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 10:36:02,888 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 10:36:14,381 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 10:36:14,381 - INFO - Iniciando limpieza de datos...
+2025-11-24 10:36:29,647 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 10:36:31,146 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 10:36:31,191 - INFO - Realizando análisis de sentimiento...
+2025-11-24 10:44:14,590 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 10:44:14,621 - INFO - Extrayendo insights por keywords...
+2025-11-24 10:44:24,131 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 10:44:35,619 - INFO - Realizando clustering de consumidores...
+2025-11-24 10:44:35,619 - WARNING - No hay columna 'user_id' para clustering. Saltando...
+2025-11-24 10:44:35,621 - INFO - Realizando análisis temporal...
+2025-11-24 10:44:35,653 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 10:44:35,653 - INFO - Realizando análisis de productos...
+2025-11-24 10:44:35,654 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 10:44:35,654 - INFO - Creando agregaciones para dashboard...
+2025-11-24 10:44:35,756 - INFO - Resumen por marca guardado
+2025-11-24 10:44:35,825 - INFO - Resumen por categoría guardado
+2025-11-24 10:44:35,829 - INFO - Métricas temporales guardadas
+2025-11-24 10:44:39,303 - INFO - Dataset procesado guardado en data/processed/processed_reviews.parquet
+2025-11-24 10:44:40,035 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 10:44:40,035 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 10:44:40,402 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 10:44:40,402 - INFO - Simulando datos de TikTok...
+2025-11-24 10:44:40,414 - INFO - Simulando datos de Instagram...
+2025-11-24 10:44:40,415 - INFO - Simulando datos de YouTube...
+2025-11-24 10:44:40,417 - INFO - Datos sociales combinados: 720 filas
+2025-11-24 10:44:40,433 - INFO - Datos sociales guardados en data/processed/social_metrics.parquet
+2025-11-24 10:44:40,462 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 10:44:40,462 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 10:44:41,325 - ERROR - Error en Analisis de correlacion: C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Downloads\proyecto_final_ENDO\amazon-sephora-pipeline\src\correlation_analysis.py", line 6, in <module>
+    from sklearn.feature_selection import chi2_contingency
+ImportError: cannot import name 'chi2_contingency' from 'sklearn.feature_selection' (C:\Users\Usuario\anaconda3\lib\site-packages\sklearn\feature_selection\__init__.py)
+
+2025-11-24 10:44:41,325 - ERROR - Pipeline fallo. Duracion: 0:09:06.072698
+2025-11-24 10:52:39,470 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 10:52:39,470 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 10:52:39,826 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 10:52:39,826 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 10:52:39,826 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 10:52:41,930 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 10:52:41,931 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 10:52:42,152 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 10:52:42,152 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 10:52:42,950 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 10:52:42,950 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 10:52:43,426 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 10:52:43,426 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 10:52:43,920 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 10:52:43,965 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 10:52:44,052 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 10:52:44,455 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 10:53:05,571 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 10:53:05,651 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 10:53:05', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 10:53:05,864 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 10:53:05,864 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 10:53:06,802 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 10:53:17,748 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 10:53:17,749 - INFO - Iniciando limpieza de datos...
+2025-11-24 10:53:32,981 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 10:53:34,481 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 10:53:34,527 - INFO - Realizando análisis de sentimiento...
+2025-11-24 11:01:21,866 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 11:01:21,897 - INFO - Extrayendo insights por keywords...
+2025-11-24 11:01:31,398 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 11:01:42,875 - INFO - Realizando clustering de consumidores...
+2025-11-24 11:01:42,875 - WARNING - No hay columna 'user_id' para clustering. Saltando...
+2025-11-24 11:01:42,876 - INFO - Realizando análisis temporal...
+2025-11-24 11:01:42,906 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 11:01:42,906 - INFO - Realizando análisis de productos...
+2025-11-24 11:01:42,906 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 11:01:42,907 - INFO - Creando agregaciones para dashboard...
+2025-11-24 11:01:42,987 - INFO - Resumen por marca guardado
+2025-11-24 11:01:43,054 - INFO - Resumen por categoría guardado
+2025-11-24 11:01:43,059 - INFO - Métricas temporales guardadas
+2025-11-24 11:01:46,655 - INFO - Dataset procesado guardado en data/processed/processed_reviews.parquet
+2025-11-24 11:01:47,401 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 11:01:47,402 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 11:01:47,779 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 11:01:47,779 - INFO - Simulando datos de TikTok...
+2025-11-24 11:01:47,786 - INFO - Simulando datos de Instagram...
+2025-11-24 11:01:47,787 - INFO - Simulando datos de YouTube...
+2025-11-24 11:01:47,788 - INFO - Datos sociales combinados: 720 filas
+2025-11-24 11:01:47,804 - INFO - Datos sociales guardados en data/processed/social_metrics.parquet
+2025-11-24 11:01:47,834 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 11:01:47,834 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 11:01:48,442 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 11:01:50,353 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 11:01:50,354 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 11:01:50,355 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 11:01:59,834 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 11:02:00,109 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 11:02:00,109 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 11:02:00,502 - ERROR - Error en Validacion de calidad de datos: C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Downloads\proyecto_final_ENDO\amazon-sephora-pipeline\src\data_validation.py", line 5, in <module>
+    import great_expectations as ge
+ModuleNotFoundError: No module named 'great_expectations'
+
+2025-11-24 11:02:00,503 - ERROR - Pipeline fallo. Duracion: 0:09:21.033238
+2025-11-24 11:06:27,109 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 11:06:27,109 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 11:06:27,487 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 11:06:27,487 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 11:06:27,487 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 11:06:29,633 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 11:06:29,633 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 11:06:29,857 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 11:06:29,857 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 11:06:30,683 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 11:06:30,683 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 11:06:31,162 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 11:06:31,162 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 11:06:31,655 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 11:06:31,702 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 11:06:31,792 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 11:06:32,206 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 11:06:53,264 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 11:06:53,344 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 11:06:53', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 11:06:53,565 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 11:06:53,566 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 11:06:54,509 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 11:07:05,141 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 11:07:05,141 - INFO - Iniciando limpieza de datos...
+2025-11-24 11:07:20,324 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 11:07:21,810 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 11:07:21,854 - INFO - Realizando análisis de sentimiento...
+2025-11-24 11:15:07,699 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 11:15:07,726 - INFO - Extrayendo insights por keywords...
+2025-11-24 11:15:17,239 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 11:15:28,816 - INFO - Realizando clustering de consumidores...
+2025-11-24 11:15:28,816 - WARNING - No hay columna 'user_id' para clustering. Saltando...
+2025-11-24 11:15:28,817 - INFO - Realizando análisis temporal...
+2025-11-24 11:15:28,848 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 11:15:28,848 - INFO - Realizando análisis de productos...
+2025-11-24 11:15:28,848 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 11:15:28,848 - INFO - Creando agregaciones para dashboard...
+2025-11-24 11:15:28,928 - INFO - Resumen por marca guardado
+2025-11-24 11:15:28,994 - INFO - Resumen por categoría guardado
+2025-11-24 11:15:28,998 - INFO - Métricas temporales guardadas
+2025-11-24 11:15:32,557 - INFO - Dataset procesado guardado en data/processed/processed_reviews.parquet
+2025-11-24 11:15:33,249 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 11:15:33,249 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 11:15:33,615 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 11:15:33,615 - INFO - Simulando datos de TikTok...
+2025-11-24 11:15:33,617 - INFO - Simulando datos de Instagram...
+2025-11-24 11:15:33,618 - INFO - Simulando datos de YouTube...
+2025-11-24 11:15:33,620 - INFO - Datos sociales combinados: 720 filas
+2025-11-24 11:15:33,636 - INFO - Datos sociales guardados en data/processed/social_metrics.parquet
+2025-11-24 11:15:33,664 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 11:15:33,665 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 11:15:34,273 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 11:15:36,124 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 11:15:36,125 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 11:15:36,126 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 11:15:46,491 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 11:15:46,762 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 11:15:46,762 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 11:15:48,875 - ERROR - Error en Validacion de calidad de datos: C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\Usuario\anaconda3\lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Downloads\proyecto_final_ENDO\amazon-sephora-pipeline\src\data_validation.py", line 6, in <module>
+    from great_expectations.dataset import PandasDataset
+ModuleNotFoundError: No module named 'great_expectations.dataset'
+
+2025-11-24 11:15:48,875 - ERROR - Pipeline fallo. Duracion: 0:09:21.765703
+2025-11-24 11:16:19,299 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 11:16:19,300 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 11:16:19,655 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 11:16:19,655 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 11:16:19,655 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 11:16:21,748 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 11:16:21,748 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 11:16:21,964 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 11:16:21,964 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 11:16:22,764 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 11:16:22,764 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 11:16:23,235 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 11:16:23,235 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 11:16:23,716 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 11:16:23,761 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 11:16:23,849 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 11:16:24,254 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 11:16:45,638 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 11:16:45,717 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 11:16:45', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 11:16:45,928 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 11:16:45,928 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 11:16:46,862 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 11:16:57,707 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 11:16:57,707 - INFO - Iniciando limpieza de datos...
+2025-11-24 11:17:12,838 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 11:17:14,337 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 11:17:14,384 - INFO - Realizando análisis de sentimiento...
+2025-11-24 11:25:02,041 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 11:25:02,068 - INFO - Extrayendo insights por keywords...
+2025-11-24 11:25:11,560 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 11:25:23,130 - INFO - Realizando clustering de consumidores...
+2025-11-24 11:25:23,131 - WARNING - No hay columna 'user_id' para clustering. Saltando...
+2025-11-24 11:25:23,132 - INFO - Realizando análisis temporal...
+2025-11-24 11:25:23,164 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 11:25:23,164 - INFO - Realizando análisis de productos...
+2025-11-24 11:25:23,164 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 11:25:23,164 - INFO - Creando agregaciones para dashboard...
+2025-11-24 11:25:23,246 - INFO - Resumen por marca guardado
+2025-11-24 11:25:23,315 - INFO - Resumen por categoría guardado
+2025-11-24 11:25:23,320 - INFO - Métricas temporales guardadas
+2025-11-24 11:25:26,921 - INFO - Dataset procesado guardado en data/processed/processed_reviews.parquet
+2025-11-24 11:25:27,650 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 11:25:27,651 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 11:25:28,017 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 11:25:28,017 - INFO - Simulando datos de TikTok...
+2025-11-24 11:25:28,019 - INFO - Simulando datos de Instagram...
+2025-11-24 11:25:28,020 - INFO - Simulando datos de YouTube...
+2025-11-24 11:25:28,021 - INFO - Datos sociales combinados: 720 filas
+2025-11-24 11:25:28,037 - INFO - Datos sociales guardados en data/processed/social_metrics.parquet
+2025-11-24 11:25:28,069 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 11:25:28,069 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 11:25:28,677 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 11:25:30,536 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 11:25:30,537 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 11:25:30,538 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 11:25:40,794 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 11:25:41,038 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 11:25:41,038 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 11:25:43,159 - INFO - Iniciando validación de datos...
+2025-11-24 11:25:43,493 - WARNING - Hay 1 textos con menos de 10 caracteres
+2025-11-24 11:25:43,498 - INFO - Distribución de clusters: {0: 1092952}
+2025-11-24 11:25:43,519 - INFO - Validación completada correctamente.
+2025-11-24 11:25:43,520 - INFO - Reporte de validación guardado en data/processed/validation_report.txt
+2025-11-24 11:25:43,762 - INFO - Validacion de calidad de datos completado exitosamente
+2025-11-24 11:25:43,762 - INFO - Pipeline completado exitosamente. Duracion: 0:09:24.462953
+2025-11-24 11:47:06,378 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 11:47:06,378 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 11:47:06,756 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 11:47:06,756 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 11:47:06,757 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 11:47:08,862 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 11:47:08,862 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 11:47:09,082 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 11:47:09,082 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 11:47:09,883 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 11:47:09,883 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 11:47:10,358 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 11:47:10,358 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 11:47:10,847 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 11:47:10,895 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 11:47:10,986 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 11:47:11,445 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 11:47:32,687 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 11:47:32,768 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 11:47:32', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 11:47:33,011 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 11:47:33,011 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 11:47:33,995 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 11:47:44,935 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 11:47:44,935 - INFO - Iniciando limpieza de datos...
+2025-11-24 11:48:00,140 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 11:48:01,684 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 11:48:01,729 - INFO - Realizando análisis de sentimiento...
+2025-11-24 11:55:48,478 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 11:55:48,509 - INFO - Extrayendo insights por keywords...
+2025-11-24 11:55:58,015 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 11:56:09,557 - INFO - Realizando clustering de consumidores...
+2025-11-24 11:56:09,557 - WARNING - No hay columna 'user_id' para clustering. Saltando...
+2025-11-24 11:56:09,558 - INFO - Realizando análisis temporal...
+2025-11-24 11:56:09,589 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 11:56:09,589 - INFO - Realizando análisis de productos...
+2025-11-24 11:56:09,590 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 11:56:09,590 - INFO - Creando agregaciones para dashboard...
+2025-11-24 11:56:09,680 - INFO - Resumen por marca guardado
+2025-11-24 11:56:09,747 - INFO - Resumen por categoría guardado
+2025-11-24 11:56:09,752 - INFO - Métricas temporales guardadas
+2025-11-24 11:56:13,253 - INFO - Dataset procesado guardado en data/processed/processed_reviews.parquet
+2025-11-24 11:56:13,969 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 11:56:13,969 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 11:56:14,345 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 11:56:14,345 - INFO - Simulando datos de TikTok...
+2025-11-24 11:56:14,351 - INFO - Simulando datos de Instagram...
+2025-11-24 11:56:14,352 - INFO - Simulando datos de YouTube...
+2025-11-24 11:56:14,354 - INFO - Datos sociales combinados: 720 filas
+2025-11-24 11:56:14,370 - INFO - Datos sociales guardados en data/processed/social_metrics.parquet
+2025-11-24 11:56:14,400 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 11:56:14,400 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 11:56:15,008 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 11:56:16,922 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 11:56:16,923 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 11:56:16,924 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 11:56:25,412 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 11:56:25,666 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 11:56:25,666 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 11:56:27,840 - INFO - Iniciando validacion de datos...
+2025-11-24 11:56:28,179 - WARNING - Hay 1 textos con menos de 10 caracteres
+2025-11-24 11:56:28,184 - INFO - Distribucion de clusters: {0: 1092952}
+2025-11-24 11:56:28,207 - INFO - Validacion completada correctamente.
+2025-11-24 11:56:28,207 - INFO - Reporte de validacion guardado en data/processed/validation_report.txt
+2025-11-24 11:56:28,446 - INFO - Validacion de calidad de datos completado exitosamente
+2025-11-24 11:56:28,446 - INFO - Pipeline completado. Exitosos: 5/5 (100.0%). Duracion: 0:09:22.068486
+2025-11-24 12:17:49,453 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 12:17:49,453 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 12:17:49,812 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 12:17:49,812 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 12:17:49,812 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 12:17:51,988 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 12:17:51,988 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 12:17:52,221 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 12:17:52,221 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 12:17:53,057 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 12:17:53,057 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 12:17:53,550 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 12:17:53,550 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 12:17:54,082 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 12:17:54,143 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 12:17:54,239 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 12:17:54,739 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 12:18:15,856 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 12:18:15,940 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 12:18:15', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 12:18:16,160 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 12:18:16,160 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 12:18:17,447 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 12:18:28,867 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 12:18:28,867 - INFO - Iniciando limpieza de datos...
+2025-11-24 12:18:44,100 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 12:18:45,624 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 12:18:45,668 - INFO - Realizando análisis de sentimiento...
+2025-11-24 12:26:33,342 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 12:26:33,370 - INFO - Extrayendo insights por keywords...
+2025-11-24 12:26:42,844 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 12:26:54,321 - INFO - Realizando clustering de consumidores...
+2025-11-24 12:26:56,040 - INFO - Clustering completado: 3 clusters creados
+2025-11-24 12:26:56,046 - INFO - Realizando análisis temporal...
+2025-11-24 12:26:56,080 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 12:26:56,081 - INFO - Realizando análisis de productos...
+2025-11-24 12:26:56,081 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 12:26:56,081 - INFO - Creando agregaciones para dashboard...
+2025-11-24 12:26:56,192 - INFO - Resumen por marca guardado
+2025-11-24 12:26:56,261 - INFO - Resumen por categoría guardado
+2025-11-24 12:26:56,267 - INFO - Métricas temporales guardadas
+2025-11-24 12:26:59,909 - INFO - Dataset procesado guardado en data/processed/processed_reviews.parquet
+2025-11-24 12:27:00,740 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 12:27:00,741 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 12:27:01,257 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 12:27:01,258 - INFO - Simulando datos de TikTok...
+2025-11-24 12:27:01,263 - INFO - Simulando datos de Instagram...
+2025-11-24 12:27:01,264 - INFO - Simulando datos de YouTube...
+2025-11-24 12:27:01,266 - INFO - Datos sociales combinados: 720 filas
+2025-11-24 12:27:01,282 - INFO - Datos sociales guardados en data/processed/social_metrics.parquet
+2025-11-24 12:27:01,311 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 12:27:01,311 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 12:27:02,024 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 12:27:03,930 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 12:27:03,931 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 12:27:03,932 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 12:27:15,246 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 12:27:15,498 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 12:27:15,499 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 12:27:17,646 - INFO - Iniciando validacion de datos...
+2025-11-24 12:27:17,986 - WARNING - Hay 1 textos con menos de 10 caracteres
+2025-11-24 12:27:17,996 - INFO - Distribucion de clusters: {0: 866386, 1: 137807, 2: 88759}
+2025-11-24 12:27:18,016 - INFO - Validacion completada correctamente.
+2025-11-24 12:27:18,017 - INFO - Reporte de validacion guardado en data/processed/validation_report.txt
+2025-11-24 12:27:18,254 - INFO - Validacion de calidad de datos completado exitosamente
+2025-11-24 12:27:18,254 - INFO - Pipeline completado. Exitosos: 5/5 (100.0%). Duracion: 0:09:28.800835
+2025-11-24 12:33:31,221 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 12:33:31,221 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 12:33:31,587 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 12:33:31,588 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 12:33:31,588 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 12:33:34,555 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 12:33:34,556 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 12:33:34,910 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 12:33:34,910 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 12:33:36,294 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 12:33:36,294 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 12:33:36,790 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 12:33:36,790 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 12:33:37,302 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 12:33:37,358 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 12:33:37,453 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 12:33:37,972 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 12:33:59,116 - INFO - Dataset combinado guardado en: data/raw/sephora_reviews.csv
+2025-11-24 12:33:59,196 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 12:33:59', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 12:33:59,428 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 12:33:59,428 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 12:34:00,706 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 12:34:12,643 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 12:34:12,643 - INFO - Iniciando limpieza de datos...
+2025-11-24 12:34:27,910 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 12:34:29,428 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 12:34:29,476 - INFO - Realizando análisis de sentimiento...
+2025-11-24 12:42:16,803 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 12:42:16,831 - INFO - Extrayendo insights por keywords...
+2025-11-24 12:42:26,351 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 12:42:37,884 - INFO - Realizando clustering basado en reseñas...
+2025-11-24 12:42:39,584 - INFO - Clustering completado: 3 clusters creados
+2025-11-24 12:42:39,587 - INFO - Realizando análisis temporal...
+2025-11-24 12:42:39,621 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 12:42:39,621 - INFO - Realizando análisis de productos...
+2025-11-24 12:42:39,621 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 12:42:39,621 - INFO - Creando agregaciones para dashboard...
+2025-11-24 12:42:39,723 - INFO - Resumen por marca guardado
+2025-11-24 12:42:39,790 - INFO - Resumen por categoría guardado
+2025-11-24 12:42:39,795 - INFO - Métricas temporales guardadas
+2025-11-24 12:42:43,294 - INFO - Dataset procesado guardado en data/processed/processed_reviews.parquet
+2025-11-24 12:42:44,109 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 12:42:44,110 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 12:42:44,667 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 12:42:44,667 - INFO - Simulando datos de TikTok...
+2025-11-24 12:42:44,673 - INFO - Simulando datos de Instagram...
+2025-11-24 12:42:44,674 - INFO - Simulando datos de YouTube...
+2025-11-24 12:42:44,676 - INFO - Datos sociales combinados: 720 filas
+2025-11-24 12:42:44,692 - INFO - Datos sociales guardados en data/processed/social_metrics.parquet
+2025-11-24 12:42:44,720 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 12:42:44,720 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 12:42:45,426 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 12:42:47,286 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 12:42:47,288 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 12:42:47,289 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 12:42:57,741 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 12:42:57,999 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 12:42:57,999 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 12:43:00,127 - INFO - Iniciando validacion de datos...
+2025-11-24 12:43:00,463 - WARNING - Hay 1 textos con menos de 10 caracteres
+2025-11-24 12:43:00,467 - INFO - Distribucion de clusters: {1: 694696, 2: 237901, 0: 160355}
+2025-11-24 12:43:00,486 - INFO - Validacion completada correctamente.
+2025-11-24 12:43:00,487 - INFO - Reporte de validacion guardado en data/processed/validation_report.txt
+2025-11-24 12:43:00,728 - INFO - Validacion de calidad de datos completado exitosamente
+2025-11-24 12:43:00,728 - INFO - Pipeline completado. Exitosos: 5/5 (100.0%). Duracion: 0:09:29.506363
+2025-11-24 14:30:18,406 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 14:30:18,407 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 14:30:18,778 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 14:30:18,779 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 14:30:18,779 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 14:30:20,941 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 14:30:20,941 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 14:30:21,170 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 14:30:21,170 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 14:30:21,989 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 14:30:21,989 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 14:30:22,482 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 14:30:22,482 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 14:30:22,987 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 14:30:23,045 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 14:30:23,146 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 14:30:23,631 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 14:30:44,715 - INFO - Dataset combinado guardado en: data/raw/combined_reviews.csv
+2025-11-24 14:30:44,796 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 14:30:44', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 14:30:45,028 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 14:30:45,028 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 14:30:46,138 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 14:30:57,703 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 14:30:57,703 - INFO - Iniciando limpieza de datos...
+2025-11-24 14:31:12,918 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 14:31:14,469 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 14:31:14,513 - INFO - Realizando análisis de sentimiento...
+2025-11-24 14:38:59,967 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 14:38:59,996 - INFO - Extrayendo insights por keywords...
+2025-11-24 14:39:09,533 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 14:39:21,481 - INFO - Realizando clustering avanzado...
+2025-11-24 14:39:21,672 - INFO - Varianza explicada por PCA: 0.850
+2025-11-24 14:39:23,535 - INFO - Clustering avanzado completado: 4 clusters creados
+2025-11-24 14:39:23,543 - INFO - Realizando análisis temporal...
+2025-11-24 14:39:23,575 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 14:39:23,576 - INFO - Realizando análisis de productos...
+2025-11-24 14:39:23,576 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 14:39:23,576 - INFO - Creando agregaciones avanzadas para dashboard...
+2025-11-24 14:39:23,576 - ERROR - Error creando agregaciones: "Column(s) ['user_id'] do not exist"
+2025-11-24 14:39:27,228 - INFO - Dataset procesado guardado en data/processed/reviews_processed.parquet
+2025-11-24 14:39:28,033 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 14:39:28,033 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 14:39:28,396 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 14:39:28,397 - INFO - Simulando datos de TikTok...
+2025-11-24 14:39:28,404 - INFO - Simulando datos de Instagram...
+2025-11-24 14:39:28,405 - INFO - Simulando datos de YouTube...
+2025-11-24 14:39:28,406 - INFO - Datos sociales combinados: 630 filas
+2025-11-24 14:39:28,422 - INFO - Datos sociales guardados en data/processed/social_media_data.parquet
+2025-11-24 14:39:28,451 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 14:39:28,452 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 14:39:29,067 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 14:39:30,924 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 14:39:30,925 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 14:39:30,926 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 14:39:40,233 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 14:39:40,485 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 14:39:40,485 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 14:39:42,641 - INFO - Iniciando validacion de datos...
+2025-11-24 14:39:42,975 - WARNING - Hay 1 textos con menos de 10 caracteres
+2025-11-24 14:39:42,979 - INFO - Distribucion de clusters: {0: 518739, 3: 286656, 1: 229266, 2: 58291}
+2025-11-24 14:39:42,999 - INFO - Validacion completada correctamente.
+2025-11-24 14:39:43,000 - INFO - Reporte de validacion guardado en data/processed/validation_report.txt
+2025-11-24 14:39:43,239 - INFO - Validacion de calidad de datos completado exitosamente
+2025-11-24 14:39:43,239 - INFO - Pipeline completado. Exitosos: 5/5 (100.0%). Duracion: 0:09:24.832927
+2025-11-24 15:18:05,378 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 15:18:05,378 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 15:18:05,742 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 15:18:05,742 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 15:18:05,742 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 15:18:07,839 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 15:18:07,839 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 15:18:08,057 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 15:18:08,058 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 15:18:08,849 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 15:18:08,849 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 15:18:09,320 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 15:18:09,320 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 15:18:09,801 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 15:18:09,847 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 15:18:09,935 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 15:18:10,341 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 15:18:31,578 - INFO - Dataset combinado guardado en: data/raw/combined_reviews.csv
+2025-11-24 15:18:31,657 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 15:18:31', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 15:18:31,881 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 15:18:31,881 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 15:18:33,135 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 15:18:44,061 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 15:18:44,061 - INFO - Iniciando limpieza de datos...
+2025-11-24 15:18:59,241 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 15:19:00,730 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 15:19:00,775 - INFO - Creando categorías diversas...
+2025-11-24 15:19:02,813 - INFO - Distribución de categorías: {'Skincare': 881293, 'Other': 114881, 'Fragrance': 41119, 'Makeup': 24510, 'Hair Care': 10968, 'Sunscreen': 5614, 'Natural': 5448, 'Body Care': 5270, 'Anti-Aging': 3849}
+2025-11-24 15:19:02,813 - INFO - Realizando análisis de sentimiento...
+2025-11-24 15:26:49,770 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 15:26:49,798 - INFO - Extrayendo insights por keywords...
+2025-11-24 15:26:59,362 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 15:27:11,264 - INFO - Realizando clustering avanzado...
+2025-11-24 15:27:11,457 - INFO - Varianza explicada por PCA: 0.850
+2025-11-24 15:27:13,333 - INFO - Clustering avanzado completado: 4 clusters creados
+2025-11-24 15:27:13,347 - INFO - Realizando análisis temporal...
+2025-11-24 15:27:13,387 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 15:27:13,387 - INFO - Realizando análisis de productos...
+2025-11-24 15:27:13,388 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 15:27:13,388 - INFO - Creando agregaciones avanzadas para dashboard...
+2025-11-24 15:27:13,388 - ERROR - Error creando agregaciones: "Column(s) ['user_id'] do not exist"
+2025-11-24 15:27:17,209 - INFO - Dataset procesado guardado en data/processed/reviews_processed.parquet
+2025-11-24 15:27:18,000 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 15:27:18,000 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 15:27:18,370 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 15:27:18,370 - INFO - Simulando datos de TikTok...
+2025-11-24 15:27:18,379 - INFO - Simulando datos de Instagram...
+2025-11-24 15:27:18,380 - INFO - Simulando datos de YouTube...
+2025-11-24 15:27:18,382 - INFO - Datos sociales combinados: 900 filas
+2025-11-24 15:27:18,397 - INFO - Datos sociales guardados en data/processed/social_media_data.parquet
+2025-11-24 15:27:18,426 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 15:27:18,426 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 15:27:19,022 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 15:27:20,962 - WARNING - No hay suficientes datos para correlacion con tiktok
+2025-11-24 15:27:20,963 - WARNING - No hay suficientes datos para correlacion con instagram
+2025-11-24 15:27:20,964 - WARNING - No hay suficientes datos para correlacion con youtube
+2025-11-24 15:27:29,648 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 15:27:29,912 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 15:27:29,912 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 15:27:32,124 - INFO - Iniciando validacion de datos...
+2025-11-24 15:27:32,461 - WARNING - Hay 1 textos con menos de 10 caracteres
+2025-11-24 15:27:32,465 - INFO - Distribucion de clusters: {0: 518739, 3: 286656, 1: 229266, 2: 58291}
+2025-11-24 15:27:32,487 - INFO - Validacion completada correctamente.
+2025-11-24 15:27:32,487 - INFO - Reporte de validacion guardado en data/processed/validation_report.txt
+2025-11-24 15:27:32,730 - INFO - Validacion de calidad de datos completado exitosamente
+2025-11-24 15:27:32,730 - INFO - Pipeline completado. Exitosos: 5/5 (100.0%). Duracion: 0:09:27.351301
+2025-11-24 17:00:20,659 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 17:00:23,121 - INFO - Creando datos sociales realistas basados en tendencias de reviews...
+2025-11-24 17:00:29,083 - INFO - Datos sociales guardados en data/processed/social_media_data.parquet
+2025-11-24 17:00:34,705 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 17:00:59,031 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 17:10:16,481 - INFO - === INICIO DEL PIPELINE ===
+2025-11-24 17:10:16,481 - INFO - Ejecutando: Ingesta de datos de reviews
+2025-11-24 17:10:16,843 - INFO - === INICIANDO PROCESO DE INGESTA ===
+2025-11-24 17:10:16,844 - INFO - Encontrados 5 archivos de reviews
+2025-11-24 17:10:16,844 - INFO - Procesando archivo: data/raw\reviews_0-250.csv
+2025-11-24 17:10:19,450 - INFO - Archivo data/raw\reviews_0-250.csv cargado: 602130 filas
+2025-11-24 17:10:19,450 - INFO - Procesando archivo: data/raw\reviews_1250-end.csv
+2025-11-24 17:10:19,801 - INFO - Archivo data/raw\reviews_1250-end.csv cargado: 49977 filas
+2025-11-24 17:10:19,802 - INFO - Procesando archivo: data/raw\reviews_250-500.csv
+2025-11-24 17:10:21,193 - INFO - Archivo data/raw\reviews_250-500.csv cargado: 206725 filas
+2025-11-24 17:10:21,193 - INFO - Procesando archivo: data/raw\reviews_500-750.csv
+2025-11-24 17:10:21,959 - INFO - Archivo data/raw\reviews_500-750.csv cargado: 116262 filas
+2025-11-24 17:10:21,959 - INFO - Procesando archivo: data/raw\reviews_750-1250.csv
+2025-11-24 17:10:22,453 - INFO - Archivo data/raw\reviews_750-1250.csv cargado: 119317 filas
+2025-11-24 17:10:22,498 - INFO - Total reseñas combinadas: 1094411 filas, 19 columnas
+2025-11-24 17:10:22,587 - INFO - Informacion de productos cargada: 8494 productos
+2025-11-24 17:10:22,990 - INFO - Merge completado: 100.0% de reseñas con informacion de producto
+2025-11-24 17:10:43,963 - INFO - Dataset combinado guardado en: data/raw/combined_reviews.csv
+2025-11-24 17:10:44,042 - INFO - Reporte de ingesta: {'timestamp': '2025-11-24 17:10:43', 'total_reviews': 1094411, 'total_products': 2351, 'date_range': {'start': '2008-08-28', 'end': '2023-03-21'}, 'rating_stats': {'mean': 4.299158177320952, 'min': 1, 'max': 5}, 'product_info_available': True, 'unique_brands': 304}
+2025-11-24 17:10:44,261 - INFO - Ingesta de datos de reviews completado exitosamente
+2025-11-24 17:10:44,261 - INFO - Ejecutando: Transformacion y enriquecimiento de datos
+2025-11-24 17:10:45,462 - INFO - === INICIANDO TRANSFORMACIÓN DE DATOS ===
+2025-11-24 17:10:56,441 - INFO - Datos cargados: 1094411 filas, 45 columnas
+2025-11-24 17:10:56,441 - INFO - Iniciando limpieza de datos...
+2025-11-24 17:11:11,583 - INFO - Reseñas después de limpieza: 1092952/1094411 (99.9%)
+2025-11-24 17:11:13,069 - INFO - Datos limpios: 1092952 filas, 46 columnas
+2025-11-24 17:11:13,113 - INFO - Creando categorías diversas...
+2025-11-24 17:11:15,147 - INFO - Distribución de categorías: {'Skincare': 881293, 'Other': 114881, 'Fragrance': 41119, 'Makeup': 24510, 'Hair Care': 10968, 'Sunscreen': 5614, 'Natural': 5448, 'Body Care': 5270, 'Anti-Aging': 3849}
+2025-11-24 17:11:15,147 - INFO - Realizando análisis de sentimiento...
+2025-11-24 17:19:02,733 - INFO - Distribución de sentimiento: {'positive': 973379, 'negative': 61220, 'neutral': 58353}
+2025-11-24 17:19:02,761 - INFO - Extrayendo insights por keywords...
+2025-11-24 17:19:12,346 - INFO - Insights por keywords extraídos exitosamente
+2025-11-24 17:19:24,256 - INFO - Realizando clustering avanzado...
+2025-11-24 17:19:24,457 - INFO - Varianza explicada por PCA: 0.850
+2025-11-24 17:19:26,380 - INFO - Clustering avanzado completado: 4 clusters creados
+2025-11-24 17:19:26,391 - INFO - Realizando análisis temporal...
+2025-11-24 17:19:26,431 - INFO - Análisis temporal completado: 5317 días analizados
+2025-11-24 17:19:26,431 - INFO - Realizando análisis de productos...
+2025-11-24 17:19:26,431 - ERROR - Error en análisis de productos: "Column(s) ['user_id'] do not exist"
+2025-11-24 17:19:26,431 - INFO - Creando agregaciones avanzadas para dashboard...
+2025-11-24 17:19:26,432 - ERROR - Error creando agregaciones: "Column(s) ['user_id'] do not exist"
+2025-11-24 17:19:30,247 - INFO - Dataset procesado guardado en data/processed/reviews_processed.parquet
+2025-11-24 17:19:31,097 - INFO - Transformacion y enriquecimiento de datos completado exitosamente
+2025-11-24 17:19:31,097 - INFO - Ejecutando: Ingesta de datos de redes sociales
+2025-11-24 17:19:31,461 - INFO - === INICIANDO INGESTA DE REDES SOCIALES ===
+2025-11-24 17:19:33,288 - INFO - Creando datos sociales realistas basados en tendencias de reviews...
+2025-11-24 17:19:37,589 - INFO - Datos sociales guardados en data/processed/social_media_data.parquet
+2025-11-24 17:19:37,879 - INFO - Ingesta de datos de redes sociales completado exitosamente
+2025-11-24 17:19:37,880 - INFO - Ejecutando: Analisis de correlacion
+2025-11-24 17:19:38,494 - INFO - === INICIANDO ANALISIS DE CORRELACION ===
+2025-11-24 17:19:59,527 - INFO - Reporte de correlacion guardado en data/processed/correlation_report.txt
+2025-11-24 17:19:59,799 - INFO - Analisis de correlacion completado exitosamente
+2025-11-24 17:19:59,799 - INFO - Ejecutando: Validacion de calidad de datos
+2025-11-24 17:20:01,996 - INFO - Iniciando validacion de datos...
+2025-11-24 17:20:02,349 - WARNING - Hay 1 textos con menos de 10 caracteres
+2025-11-24 17:20:02,353 - INFO - Distribucion de clusters: {0: 518739, 3: 286656, 1: 229266, 2: 58291}
+2025-11-24 17:20:02,371 - INFO - Validacion completada correctamente.
+2025-11-24 17:20:02,372 - INFO - Reporte de validacion guardado en data/processed/validation_report.txt
+2025-11-24 17:20:02,623 - INFO - Validacion de calidad de datos completado exitosamente
+2025-11-24 17:20:02,623 - INFO - Pipeline completado. Exitosos: 5/5 (100.0%). Duracion: 0:09:46.142006
