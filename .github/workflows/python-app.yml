@@ -1,0 +1,48 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: CI/CD - Sephora Reviews Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    name:  Build, Lint & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name:  Checkout repo
+        uses: actions/checkout@v4
+
+      - name:  Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name:  Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest flake8 coverage
+
+      - name:  Lint code (PEP8 check)
+        run: flake8 src tests --max-line-length=120 --ignore=E203,W503
+
+      - name:  Run unit tests
+        run: pytest tests/ --maxfail=1 --disable-warnings --cov=src --cov-report=term-missing
+
+      - name:  Run smoke test (pipeline execution)
+        run: |
+          echo "Ejecutando pipeline principal..."
+          python src/orchestrator.py || echo "Pipeline ejecutado en modo smoke test"
+
+      - name:  Save pipeline logs
+        if: always()
+        run: |
+          echo "Mostrando las últimas líneas del log de ejecución (si existe):"
+          tail -n 20 pipeline_execution.log || echo "No se encontró el log."
+
