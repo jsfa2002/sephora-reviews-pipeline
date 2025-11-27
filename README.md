@@ -447,7 +447,7 @@ Los hashtags que aparecen ahí son los que el sistema va a "monitorear" (simular
 ### Los niveles de log
 
 Puedes poner:
-- `DEBUG`: Te dice TODO lo que está pasando (muy detallado)
+- `DEBUG`: Dice todo lo que está pasando 
 - `INFO`: Nivel normal, información útil sin saturar
 - `WARNING`: Solo advertencias
 - `ERROR`: Solo errores
