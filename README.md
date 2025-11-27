@@ -554,6 +554,8 @@ Estos son los hallazgos más importantes del análisis:
 
 **pytest**: Para escribir y correr tests.
 
+**mermaid**: Para diagramar.
+
 ### Instalación
 
 Todo lo que se necesita está en `requirements.txt`. Para instalar todo de una vez:
@@ -608,11 +610,7 @@ Para mantener el código limpio y consistente:
 https://github.com/jsfa2002/sephora-reviews-pipeline
 ```
 
-### Documentación adicional
 
-Para más detalles:
-- `docs/pipeline_diagram.md`: Diagramas detallados de la arquitectura
-- `docs/dependencies.md`: Información completa de las librerías
 
 ### Referencias
 
@@ -622,6 +620,42 @@ Este proyecto usa:
 - Plotly (plotly.com/python/)
 - scikit-learn (scikit-learn.org)
 - VADER Sentiment (github.com/cjhutto/vaderSentiment)
+
+**Material de clase y académico**
+
+-Torres, M. J. (2025). Notas de clase - Enfoque de DataOps. Escuela Colombiana de Ingeniería Julio Garavito.
+
+**Webgrafía técnica**
+
+- Dataset Sephora Reviews: Kaggle (https://www.kaggle.com/datasets/nadyinky/sephora-products-and-reviews)
+
+- Streamlit Documentation: https://docs.streamlit.io
+
+- Plotly Python Graphing Library: https://plotly.com/python/
+
+- Scikit-learn: https://scikit-learn.org/stable/
+
+- VADER Sentiment Analysis: https://github.com/cjhutto/vaderSentiment
+
+- TextBlob NLP Library: https://textblob.readthedocs.io/
+
+- SciPy Statistics: https://docs.scipy.org/doc/scipy/reference/stats.html
+
+- PyYAML: https://pyyaml.org/wiki/PyYAMLDocumentation
+
+- pytest: https://docs.pytest.org/en/stable/
+
+- GitHub Actions CI/CD: https://docs.github.com/en/actions
+
+**Asistencia de IA y herramientas de apoyo**
+
+Durante el desarrollo de este proyecto se contó con apoyo en código, corrección de lenguaje y redacción de documentación de herramientas basadas en IA, incluyendo:
+
+DeepSeek, para depuración y optimización de código Python.
+
+Claude, para asistencia en redacción técnica.
+
+ChatGPT, para generación de fragmentos de código, corrección de estilo y apoyo en documentación técnica.
 
 ---
 
