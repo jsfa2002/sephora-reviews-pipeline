@@ -68,23 +68,23 @@ Aquí está el diagrama de cómo funciona el pipeline completo:
 
 ### Explicación del flujo
 
-**Paso 1 - Fuentes de datos**: Todo comienza con archivos CSV que tienen las reseñas de los clientes y la información de los productos.
+**Paso 1 - Fuentes de datos**: Primero lso archivos CSV que tienen las reseñas de los clientes y la información de los productos.
 
 **Paso 2 - Ingesta**: El script `data_ingestion.py` junta todos los archivos separados en uno solo y verifica que todo esté en orden.
 
-**Paso 3 - Transformación**: Aquí es donde `data_transformation.py` limpia los textos, elimina cosas raras como URLs, y prepara todo para el análisis.
+**Paso 3 - Transformación**: Aquí en `data_transformation.py` limpia los textos, elimina cosas raras como URLs, y prepara todo para el análisis.
 
-**Paso 4 - Análisis NLP**: Usamos procesamiento de lenguaje natural para entender el sentimiento de cada reseña. Básicamente, el sistema lee la reseña y dice "esto es positivo" o "esto es negativo".
+**Paso 4 - Análisis NLP**: Usamos procesamiento de lenguaje natural para entender el sentimiento de cada reseña, o sea que el sistema lee la reseña y dice "esto es positivo" o "esto es negativo".
 
-**Paso 5 - Clustering**: Agrupamos a los usuarios que se comportan de forma similar. Por ejemplo, están los que siempre dan 5 estrellas y los que son más críticos.
+**Paso 5 - Clustering**: Agrupamos a los usuarios que se comportan de forma similar, por ejemplo, están los que siempre dan 5 estrellas y los que son más críticos.
 
 **Paso 6 - Redes sociales**: Generamos datos simulados de TikTok, Instagram y YouTube que están relacionados con las reseñas reales.
 
-**Paso 7 - Correlación**: Aquí es donde medimos qué tan relacionadas están las menciones en redes sociales con las reseñas. Spoiler: están MUY relacionadas.
+**Paso 7 - Correlación**: Aquí se mide qué tan relacionadas están las menciones en redes sociales con las reseñas. 
 
 **Paso 8 - Validación**: Verificamos que todos los datos estén bien, que no haya errores y que todo tenga sentido.
 
-**Paso 9 - Dashboard**: Todo se presenta en un dashboard bonito donde puedes ver gráficas, filtrar datos y explorar los resultados.
+**Paso 9 - Dashboard**: Todo se presenta en un dashboard bonito donde se pueden ver gráficas, filtrar datos y explorar los resultados.
 
 **Paso 10 - Insights**: El sistema genera alertas automáticas y conclusiones útiles para tomar decisiones.
 
@@ -94,11 +94,11 @@ Aquí está el diagrama de cómo funciona el pipeline completo:
 
 ### Lo que se necesita tener instalado
 
-Antes de empezar,  toca tener esto en tu computadora:
+Toca tener esto en la computadora:
 - Python 3.9 o más reciente
 - Git (para descargar el código)
 
-Para verificar que los tienes, abre tu terminal y escribe:
+Para verificar que se tiene, abre la terminal y escribe:
 
 ```bash
 python --version
@@ -135,7 +135,7 @@ pip install pandas numpy textblob vaderSentiment scikit-learn matplotlib seaborn
 
 **Paso 3: Descargar datos adicionales**
 
-TextBlob necesita algunos datos extras:
+TextBlob necesita algunos datos:
 ```bash
 python -m textblob.download_corpora
 ```
@@ -154,7 +154,7 @@ Coloca tus archivos CSV en la carpeta `data/raw/`:
 python src/orchestrator.py
 ```
 
-Esto va a correr todo el proceso completo: carga los datos, los limpia, hace el análisis, y genera los reportes. Puede tardar unos minutos dependiendo de cuántos datos tengas.
+Esto va a correr todo el proceso completo: carga los datos, los limpia, hace el análisis, y genera los reportes. Puede tardar unos minutos dependiendo de cuántos datos se tenga.
 
 <img width="912" height="397" alt="image" src="https://github.com/user-attachments/assets/16cc77e0-5dd9-4211-9c4c-e47b64fb7b19" />
 
@@ -569,7 +569,6 @@ O usar el script automático:
 python install_quick.py
 ```
 
-Si son necesarios más detalles sobre alguna librería o hay problemas, revisar `docs/dependencies.md`
 
 ---
 
@@ -677,4 +676,4 @@ El sistema puede procesar más de un millón de reseñas y generar insights úti
 
 ---
 
-Este proyecto es un proyecto académico sobre Enfoque de DataOps y análisis de datos.
+Este proyecto es un proyecto académico sobre Enfoque de DataOps y análisis de datos, de la materia ENDO de la Universidad Escuela de Ingeniería Julio Garavito, del programa de Ingeniería Estadística.
