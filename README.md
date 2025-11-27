@@ -63,6 +63,7 @@ Lo que se encuentra al principio en el dashboard ahora:
 
 Aquí está el diagrama de cómo funciona el pipeline completo:
 
+<img width="1843" height="110" alt="image" src="https://github.com/user-attachments/assets/0cc99a24-cb0d-4af5-b077-dacd38ef6477" />
 
 
 ### Explicación del flujo
