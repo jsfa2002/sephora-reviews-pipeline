@@ -412,6 +412,9 @@ Esto asegura que el código siempre funcione bien, incluso cuando varias persona
 
 <img width="1298" height="370" alt="image" src="https://github.com/user-attachments/assets/0d9edfdb-756a-4982-8802-41bc60447270" />
 
+<img width="1890" height="766" alt="image" src="https://github.com/user-attachments/assets/ced78b4d-c790-45ab-85de-3181b5b0f3a2" />
+
+
 ---
 
 ## Configuración del sistema
@@ -455,7 +458,7 @@ Puedes poner:
 
 ### Los logs
 
-Todo lo que hace el pipeline se guarda en `pipeline_execution.log`. Es como un diario que te dice qué pasó, cuándo y si hubo algún problema:
+Todo lo que hace el pipeline se guarda en `pipeline_execution.log`. La idea es que sea como un diario que dice qué pasó, cuándo y si hubo algún problema:
 
 ```
 2024-01-15 10:30:15 - INFO - Iniciando proceso de ingesta
@@ -467,7 +470,7 @@ Si algo falla, el log te dice exactamente dónde y por qué.
 
 ### Métricas de calidad en el dashboard
 
-El dashboard tiene una sección que te muestra qué tan buenos están tus datos:
+El dashboard tiene una sección que muestra qué tan buenos están los datos:
 
 **Completitud**: Qué porcentaje de los datos está completo. Nosotros tenemos 100%.
 
@@ -479,17 +482,17 @@ El dashboard tiene una sección que te muestra qué tan buenos están tus datos:
 
 ### Sistema de alertas automático
 
-El dashboard te avisa automáticamente cuando detecta algo raro:
+El dashboard avisa automáticamente cuando detecta algo raro:
 
-**Alerta Crítica (rojo)**: Cuando más del 30% de las reseñas son negativas por 3 días seguidos. Algo malo está pasando.
+**Alerta Crítica (rojo)**: Cuando más del 30% de las reseñas son negativas por 3 días seguidos, entonces algo malo está pasando.
 
-**Alerta Alta (amarillo)**: Cuando más del 10% de las reseñas tienen rating menor o igual a 2. Hay problemas de calidad.
+**Alerta Alta (amarillo)**: Cuando más del 10% de las reseñas tienen rating menor o igual a 2, o sea que hay problemas de calidad.
 
-**Alerta Media (azul)**: Cuando la correlación con redes sociales baja de 0.3 por una semana. La estrategia social no está funcionando.
+**Alerta Media (azul)**: Cuando la correlación con redes sociales baja de 0.3 por una semana, lo que significaría que la estrategia social no está funcionando.
 
-**Anomalías (gris)**: Días donde el volumen de reseñas es muy diferente al normal (más de 2 desviaciones estándar).
+**Anomalías (gris)**: Días donde el volumen de reseñas es muy diferente al normal, más de 2 desviaciones estándar.
 
-Actualmente hay una alerta amarilla porque el 10.4% de las reseñas tienen rating bajo. El resto está bien.
+Actualmente hay una alerta amarilla porque el 10.4% de las reseñas tienen rating bajo, el resto está bien.
 
 ---
 
@@ -499,31 +502,31 @@ Actualmente hay una alerta amarilla porque el 10.4% de las reseñas tienen ratin
 
 Estos son los hallazgos más importantes del análisis:
 
-**1. TikTok es la plataforma más poderosa**: Con una correlación de 0.989, TikTok es donde mejor se ve la relación entre menciones y reseñas. Si quieres que la gente deje más reviews, invierte en TikTok.
+**1. TikTok es la plataforma más poderosa**: Con una correlación de 0.989, TikTok es donde mejor se ve la relación entre menciones y reseñas.,entonces si se quiere que la gente deje más reviews, lo mejor sería invertir en TikTok.
 
-**2. Los perfumes son los favoritos**: La categoría Fragrance tiene el mejor rating (4.41) y las reseñas más positivas. Es claramente un punto fuerte.
+**2. Los perfumes son los favoritos**: La categoría Fragrance tiene el mejor rating (4.41) y las reseñas más positivas. 
 
-**3. El 23% de usuarios son "Champions"**: Este grupo compra seguido, da buenos ratings y es muy activo. Son los clientes más valiosos y hay que cuidarlos.
+**3. El 23% de usuarios son "Champions"**: Este grupo compra seguido, da buenos ratings y es muy activo, entonces serían los clientes más valiosos y habría que cuidarlos.
 
-**4. Hay una oportunidad de mejora**: El 10.4% de las reseñas son bastante negativas (rating ≤ 2). Estos productos necesitan atención.
+**4. Hay una oportunidad de mejora**: El 10.4% de las reseñas son bastante negativas (rating ≤ 2), o sea que estos productos necesitan atención.
 
-**5. La tendencia es positiva**: El volumen de reseñas está creciendo y el engagement también. El negocio va bien.
+**5. La tendencia es positiva**: El volumen de reseñas está creciendo y el engagement también, lo que significa que el negocio va bien.
 
 ### Qué hacer con esta información
 
 **Para los próximos 1-3 meses:**
 
-**Invertir más en TikTok**: Los números lo demuestran - TikTok tiene el mejor retorno de inversión. Hay que hacer más campañas ahí, especialmente con los hashtags #skincare y #makeup que funcionan bien.
+**Invertir más en TikTok**: Los números lo muestran, TikTok tiene el mejor retorno de inversión, entonces lo mejor sería hacer más campañas ahí, especialmente con los hashtags #skincare y #makeup que funcionan bien.
 
-**Crear un programa VIP para Champions**: El 23% de usuarios Champions son oro puro. Hazles un programa especial con descuentos exclusivos, acceso anticipado a productos nuevos, y eventos privados.
+**Crear un programa VIP para Champions**: El 23% de usuarios Champions son un punto fuerte económicamente, se podría hacer un programa especial con descuentos exclusivos, acceso anticipado a productos nuevos, y eventos privados.
 
-**Revisar los productos problemáticos**: Analiza bien esas reseñas negativas. Qué se está quejando la gente? Pasa ese feedback a los proveedores para que mejoren los productos.
+**Revisar los productos problemáticos**: Analiza bien esas reseñas negativas, hacerse preguntas como qué se está quejando la gente? y luego pasar ese feedback a los proveedores para que mejoren los productos.
 
 **Para los próximos 6-12 meses:**
 
 **Poner el dashboard en producción**: Que se actualice todos los días automáticamente para monitorear las métricas en tiempo real.
 
-**Mejorar las predicciones**: Implementar modelos más sofisticados (ARIMA o Prophet) para predecir mejor las tendencias y optimizar el inventario.
+**Mejorar las predicciones**: Implementar modelos más sofisticados tal vez un ARIMA o Prophet, para predecir mejor las tendencias y optimizar el inventario.
 
 **Sistema de recomendaciones**: Usar los clusters de usuarios para recomendar productos personalizados a cada tipo de cliente.
 
@@ -533,13 +536,13 @@ Estos son los hallazgos más importantes del análisis:
 
 ### Las herramientas principales
 
-**Python 3.9+**: El lenguaje de programación principal. Lo elegimos porque tiene muchas librerías buenas para datos.
+**Python 3.9+**: El lenguaje de programación principal, lo elegí porque tiene varias librerías buenas para datos, y es el más usado.
 
 **pandas y numpy**: Las librerías básicas para trabajar con datos. pandas maneja tablas de datos y numpy hace cálculos numéricos rápidos.
 
-**VADER y TextBlob**: Herramientas especializadas en análisis de sentimiento. VADER es buena para textos de redes sociales (informales), y TextBlob agrega capacidades extra.
+**VADER y TextBlob**: Herramientas especializadas en análisis de sentimiento. VADER es buena para textos de redes sociales informales, y TextBlob agrega capacidades extra.
 
-**scikit-learn**: La librería de machine learning. La usamos para el clustering (K-means), reducción de dimensiones (PCA) y normalización de datos.
+**scikit-learn**: La librería de machine learning, que la usamos para el clustering (K-means), reducción de dimensiones (PCA) y normalización de datos.
 
 **scipy**: Nos da funciones estadísticas avanzadas como correlaciones de Spearman y Pearson, y pruebas ANOVA.
 
@@ -559,7 +562,7 @@ Todo lo que se necesita está en `requirements.txt`. Para instalar todo de una v
 pip install -r requirements.txt
 ```
 
-O usa el script automático:
+O usar el script automático:
 ```bash
 python install_quick.py
 ```
