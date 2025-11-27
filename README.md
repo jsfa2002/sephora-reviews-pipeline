@@ -410,6 +410,8 @@ Cada vez que haces push al repositorio, GitHub Actions corre automáticamente:
 
 Esto asegura que el código siempre funcione bien, incluso cuando varias personas trabajan en él.
 
+<img width="1298" height="370" alt="image" src="https://github.com/user-attachments/assets/0d9edfdb-756a-4982-8802-41bc60447270" />
+
 ---
 
 ## Configuración del sistema
@@ -433,11 +435,11 @@ social_media:
   instagram_hashtags: ["skincare", "makeup", "beautyblogger"]
 ```
 
-Puedes cambiar aquí las rutas de los archivos, los hashtags que quieres monitorear, o el nivel de detalle de los logs, sin tocar el código.
+Puede cambiar aquí las rutas de los archivos, los hashtags que quieres monitorear, o el nivel de detalle de los logs, sin tocar el código.
 
 ### Los hashtags
 
-Los hashtags que aparecen ahí son los que el sistema va a "monitorear" (simular) en las redes sociales. Puedes agregar los que quieras o cambiarlos por otros.
+Los hashtags que aparecen ahí son los que el sistema va a "monitorear" (simular) en las redes sociales. Pueden agregar los que quieras o cambiarlos por otros.
 
 ### Los niveles de log
 
