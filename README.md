@@ -92,9 +92,9 @@ Aquí está el diagrama de cómo funciona el pipeline completo:
 
 ## Cómo instalarlo y usarlo
 
-### Lo que necesitas tener instalado
+### Lo que se necesita tener instalado
 
-Antes de empezar, asegúrate de tener esto en tu computadora:
+Antes de empezar,  toca tener esto en tu computadora:
 - Python 3.9 o más reciente
 - Git (para descargar el código)
 
@@ -156,13 +156,36 @@ python src/orchestrator.py
 
 Esto va a correr todo el proceso completo: carga los datos, los limpia, hace el análisis, y genera los reportes. Puede tardar unos minutos dependiendo de cuántos datos tengas.
 
+<img width="912" height="397" alt="image" src="https://github.com/user-attachments/assets/16cc77e0-5dd9-4211-9c4c-e47b64fb7b19" />
+
+
 **Para ver el dashboard:**
 
 ```bash
 streamlit run src/dashboard.py
 ```
 
-Se va a abrir una ventana en tu navegador con el dashboard. Si no se abre solo, ve a `http://localhost:8501`.
+Se va a abrir una ventana en el navegador con el dashboard. Si no se abre solo, toca ir a `http://localhost:8501`.
+
+<img width="1326" height="208" alt="image" src="https://github.com/user-attachments/assets/631bcb41-eec1-4126-bb44-76ab2a40edd0" />
+
+Algo asi debe verse:
+
+<img width="1906" height="932" alt="image" src="https://github.com/user-attachments/assets/8b463715-fbfb-4317-b8bf-d507e09664a6" />
+
+<img width="1905" height="762" alt="image" src="https://github.com/user-attachments/assets/7abf0d6c-ef23-411a-ad5d-039b092c4180" />
+
+<img width="1890" height="851" alt="image" src="https://github.com/user-attachments/assets/99bc6cd0-1b11-45fe-9e7f-4ed2c275d3a0" />
+
+<img width="1904" height="736" alt="image" src="https://github.com/user-attachments/assets/2622ea1f-6464-44f5-ba9a-9e7f1fcb4776" />
+
+<img width="1650" height="753" alt="image" src="https://github.com/user-attachments/assets/70672b88-cc98-4d3d-8d78-915309e1c440" />
+
+<img width="1675" height="762" alt="image" src="https://github.com/user-attachments/assets/5332ab0f-ca0e-4b08-bfa2-2054d4d109ef" />
+
+<img width="1732" height="899" alt="image" src="https://github.com/user-attachments/assets/84660fa0-6613-414f-8025-6bcf51a74770" />
+
+
 
 ---
 
@@ -211,12 +234,16 @@ SEPHORA-REVIEWS-PIPELINE/
 ├── install_quick.py                  Script de instalación
 └── pipeline_execution.log            Registro de lo que hace el sistema
 ```
+<img width="289" height="556" alt="image" src="https://github.com/user-attachments/assets/ebb95ae8-cd90-45d0-9808-db6e5369ca31" />
+
+<img width="286" height="376" alt="image" src="https://github.com/user-attachments/assets/9d7a4c67-1147-41bd-8eff-7982c38bda4e" />
+
 
 ### Qué hay en cada carpeta
 
 **config**: Tiene el archivo YAML donde está toda la configuración del pipeline (rutas, parámetros, hashtags, etc.)
 
-**data**: Aquí van todos los datos. La carpeta `raw` tiene los datos originales sin tocar, y `processed` tiene los datos ya procesados. Esta carpeta NO se sube a GitHub porque puede ser muy pesada.
+**data**: Aquí van todos los datos. La carpeta `raw` tiene los datos originales sin tocar, y `processed` tiene los datos ya procesados. Esta carpeta no se recomienda subir a GitHub porque puede ser muy pesada.
 
 **src**: Aquí está todo el código Python. Cada archivo hace algo específico del pipeline.
 
@@ -240,13 +267,14 @@ El sistema promedia los resultados de ambas para tener un análisis más confiab
 
 ### Agrupación de usuarios (clustering)
 
-Usamos un algoritmo llamado K-means que agrupa a los usuarios que se comportan parecido. Antes de aplicar K-means, usamos PCA (Principal Component Analysis) para reducir la complejidad de los datos.
+Usamos un algoritmo llamado K-means que agrupa a los usuarios que se comportan parecido. Antes de aplicar K-means, usamos PCA para reducir la complejidad de los datos.
 
 El sistema identifica 4 grupos:
-- Usuarios normales (escriben reseñas típicas)
-- Usuarios muy positivos (casi siempre dan 5 estrellas)
-- Usuarios críticos (tienden a dar ratings bajos)
-- Usuarios detallistas (escriben reseñas muy largas)
+
+- Usuarios normales, que escriben reseñas típicas
+- Usuarios muy positivos, que casi siempre dan 5 estrellas
+- Usuarios críticos, que tienden a dar ratings bajos
+- Usuarios detallistas, que escriben reseñas muy largas
 
 ### Correlaciones
 
@@ -255,19 +283,19 @@ Esto mide qué tan relacionadas están dos cosas. Por ejemplo, ¿cuando hay much
 Usamos dos tipos de correlación:
 
 **Spearman**: Buena para cuando la relación no es lineal o cuando trabajamos con rankings
-**Pearson**: Mejor para relaciones lineales directas
+**Pearson**: Esta es mejor para relaciones lineales directas
 
-Los valores van de -1 a +1. Un valor cerca de 1 significa que están muy relacionadas positivamente (una sube, la otra sube). Un valor cerca de -1 significa que están relacionadas negativamente (una sube, la otra baja). Un valor cerca de 0 significa que no hay relación.
+Los valores van de -1 a +1. Un valor cerca de 1 significa que están muy relacionadas positivamente donde una sube, la otra sube. Un valor cerca de -1 significa que están relacionadas negativamente (una sube, la otra baja). Un valor cerca de 0 significa que no hay relación.
 
 ### ANOVA
 
 Es una prueba estadística que nos dice si hay diferencias "reales" entre grupos. Por ejemplo, ¿los perfumes tienen mejor rating que el maquillaje, o es solo casualidad?
 
-Si el p-value es menor a 0.05, significa que las diferencias son reales y no por azar.
+Si el p-value es menor a 0.05, significa que las diferencias son reales y no son por azar.
 
 ### Análisis temporal
 
-El sistema calcula promedios móviles de 7 y 30 días para ver tendencias sin que las variaciones diarias te confundan. También busca "anomalías" - días donde pasó algo raro (como un pico enorme de reseñas).
+El sistema calcula promedios móviles de 7 y 30 días para ver tendencias sin que las variaciones diarias te confundan. También busca "anomalías" - días donde pasó algo raro, como por ejemplo un pico enorme de reseñas.
 
 Para detectar anomalías usa el Z-score: si un día tiene más de 2 desviaciones estándar por encima o debajo del promedio, se marca como anómalo.
 
@@ -277,7 +305,7 @@ Para detectar anomalías usa el Z-score: si un día tiene más de 2 desviaciones
 
 ### Las correlaciones que encontramos
 
-Descubrimos que hay una relación MUY fuerte entre lo que pasa en redes sociales y las reseñas:
+Descubrimos que hay una relación muy fuerte entre lo que pasa en redes sociales y las reseñas:
 
 **TikTok**: Correlación de 0.989 (casi perfecta). Esto significa que cuando hay muchas menciones en TikTok, también hay muchas más reseñas. Y viceversa.
 
@@ -289,19 +317,21 @@ En todos los casos el p-value es menor a 0.001, lo que significa que es estadís
 
 Por otro lado, la correlación entre el sentimiento de las reseñas y el engagement en redes sociales es baja (entre 0.249 y 0.332). O sea, que un post tenga muchos likes no necesariamente significa que la gente esté contenta con el producto.
 
+Hay que tener en cuenta que esto pasa si analizamos todas las fechas, o los ultimos años, por ejemplo si escohieramos un intervalo de tiempo donde las redes sociales no estban en auge, baja la correlación.
+
 ### Los diferentes tipos de clientes
 
 Encontramos 5 grupos de clientes usando análisis RFM (Recency, Frequency, Monetary):
 
-**Champions (23%)**: Son los clientes más valiosos. Compran seguido, hace poco que compraron, y dan buenos ratings. Son perfectos para programas VIP.
+**Champions (23%)**: Son los clientes más valiosos. Compran seguido, hace poco que compraron, y dan buenos ratings, y además son perfectos para programas VIP.
 
-**Clientes Leales (31%)**: Compran regularmente y están contentos. Son estables y confiables.
+**Clientes Leales (31%)**: Compran regularmente y están contentos, son estables y confiables.
 
-**Potenciales Leales (18%)**: Son nuevos o compran poco, pero muestran señales positivas. Con la estrategia correcta pueden volverse leales.
+**Potenciales Leales (18%)**: Son nuevos o compran poco, pero muestran señales positivas, y con la estrategia correcta podrían subir y volverse leales.
 
-**En Riesgo (15%)**: Antes compraban más pero ahora no tanto. Hay que recuperarlos con ofertas o incentivos.
+**En Riesgo (15%)**: Antes compraban más pero ahora no tanto, con ellos la idea es que hay que recuperarlos con ofertas o incentivos.
 
-**Clientes Perdidos (13%)**: No han comprado en mucho tiempo. Necesitan campañas de reactivación fuertes.
+**Clientes Perdidos (13%)**: No han comprado en mucho tiempo, entonces por ejemplo ellos necesitan campañas de reactivación fuertes.
 
 ### Cómo se siente la gente sobre los productos
 
@@ -315,7 +345,7 @@ El rating promedio es 4.30 de 5, lo cual es bastante bueno.
 
 ### Diferencias entre categorías
 
-Hicimos un análisis ANOVA y encontramos que SÍ hay diferencias significativas entre categorías (F=309.06, p<0.001):
+Hicimos un análisis ANOVA y encontramos que sí hay diferencias significativas entre categorías (F=309.06, p<0.001):
 
 **Fragrance (Perfumes)**: Los mejores, con rating de 4.41 y pocas reseñas negativas
 
@@ -337,6 +367,7 @@ Para correr todos los tests:
 ```bash
 pytest tests/
 ```
+<img width="1323" height="378" alt="image" src="https://github.com/user-attachments/assets/934cb019-d83a-4598-8fc4-8866328911f3" />
 
 Para ver qué porcentaje del código está cubierto por tests:
 ```bash
@@ -349,8 +380,8 @@ pytest tests/test_pipeline.py::TestPipeline::test_data_cleaning
 ```
 
 Los tests verifican cosas como:
-- Que la limpieza de datos funcione (elimina filas vacías, valida rangos)
-- Que el análisis de sentimiento clasifique bien (textos positivos, negativos, neutrales)
+- Que la limpieza de datos funcione: elimina filas vacías, valida rangos
+- Que el análisis de sentimiento clasifique bien: textos positivos, negativos, neutrales
 - Que la carga de datos funcione correctamente
 - Que todos los valores estén en los rangos correctos
 
