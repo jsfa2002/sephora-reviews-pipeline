@@ -209,7 +209,8 @@ streamlit run src/dashboard.py
 
 Se va a abrir una ventana en el navegador con el dashboard. Si no se abre solo, toca ir a `http://localhost:8501`.
 
-<img width="1326" height="208" alt="image" src="https://github.com/user-attachments/assets/631bcb41-eec1-4126-bb44-76ab2a40edd0" />
+<img width="926" height="601" alt="image" src="https://github.com/user-attachments/assets/11b68e2b-dd43-44bc-961d-986a8fa68c87" />
+
 
 Algo asi debe verse:
 
