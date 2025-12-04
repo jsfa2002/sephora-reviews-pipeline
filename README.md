@@ -10,7 +10,7 @@ Este proyecto es un pipeline automatizado que analiza más de un millón de rese
 
 ### El objetivo principal
 
-La idea es crear un sistema automático que tome datos de reseñas de productos y los combine con información de redes sociales como TikTok, Instagram y YouTube. Después de procesarlos, el sistema encuentra patrones y correlaciones que ayudan a entender mejor qué está pasando con los productos y cómo la gente los percibe.
+La idea es crear un sistema automático que tome datos de reseñas de productos y los combine con información de redes sociales como twitter, TikTok, Instagram y YouTube. Después de procesarlos, el sistema encuentra patrones y correlaciones que ayudan a entender mejor qué está pasando con los productos y cómo la gente los percibe.
 
 ### Objetivos específicos
 
@@ -44,9 +44,48 @@ El sistema hace varios tipos de análisis:
 
 **Predicciones simples**: El sistema puede proyectar tendencias futuras basándose en promedios móviles de los últimos días.
 
-### Un dashboard para ver todo
+### Dashboard 
 
 Creamos un dashboard interactivo con Streamlit que tiene más de 15 gráficas diferentes. Puedes filtrar por marca, categoría, fecha o plataforma social. También hay un sistema de alertas que te avisa cuando algo no se ve bien, como cuando hay muchas reseñas negativas de repente.
+
+#### Integración con API de Twitter/X
+El sistema incluye recolección REAL de datos de Twitter usando la API oficial v2:
+
+**Características:**
+
+- Búsqueda de tweets recientes por hashtags (#Sephora, #Makeup, #Skincare, #Beauty)
+
+- Análisis de engagement (likes, retweets, replies)
+
+- Análisis de sentimiento en tiempo real con VADER
+
+- Fallback automático a datos simulados si la API falla o no está configurada
+
+- Cómo activarla:
+
+- Obtén un Bearer Token GRATIS en Twitter Developer Portal
+
+- Crea un archivo .env en la raíz del proyecto:
+
+TWITTER_BEARER_TOKEN="tu_token_aqui"
+
+El pipeline detecta automáticamente si hay token válido y usa datos reales
+
+**Métricas recolectadas de Twitter:**
+
+- Total de tweets por hashtag
+
+- Engagement total y promedio
+
+- Distribución de sentimiento (positivo/neutral/negativo)
+
+- Hashtags más populares
+
+- Tweets destacados
+
+- Volumen al día
+
+Si no configuras la API de Twitter, el sistema automáticamente genera datos simulados realistas sin detener el flujo del pipeline.
 
 ### Los números importantes
 
