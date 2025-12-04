@@ -282,9 +282,11 @@ SEPHORA-REVIEWS-PIPELINE/
 └── pipeline_execution.log            # Registro de lo que hace el sistema
 
 ```
-<img width="289" height="556" alt="image" src="https://github.com/user-attachments/assets/ebb95ae8-cd90-45d0-9808-db6e5369ca31" />
+<img width="293" height="642" alt="image" src="https://github.com/user-attachments/assets/137182e0-dee4-47a2-bb30-47f2f29d981f" />
 
-<img width="286" height="376" alt="image" src="https://github.com/user-attachments/assets/9d7a4c67-1147-41bd-8eff-7982c38bda4e" />
+<img width="282" height="489" alt="image" src="https://github.com/user-attachments/assets/a9b6c881-4789-481d-a4f5-86e2f6f26d74" />
+
+
 
 
 ### Qué hay en cada carpeta
@@ -298,6 +300,8 @@ SEPHORA-REVIEWS-PIPELINE/
 **tests**: Los tests que verifican que todo funcione bien.
 
 **docs**: Documentación técnica más detallada.
+
+**.env**: Archivo con variables de entorno secretas, como el token de Twitter. No se sube a Git por seguridad.
 
 ---
 
@@ -346,6 +350,49 @@ Si el p-value es menor a 0.05, significa que las diferencias son reales y no son
 El sistema calcula promedios móviles de 7 y 30 días para ver tendencias sin que las variaciones diarias te confundan. También busca "anomalías" - días donde pasó algo raro, como por ejemplo un pico enorme de reseñas.
 
 Para detectar anomalías usa el Z-score: si un día tiene más de 2 desviaciones estándar por encima o debajo del promedio, se marca como anómalo.
+
+### Modelos predictivos
+El dashboard incluye dos modelos de regresión lineal para explorar relaciones entre variables:
+
+Modelo 1: Engagement de Redes Sociales → Rating Promedio
+
+R² Score: ~0.002 Muy bajo, pero esperado
+
+Este resultado es correcto y esperado porque:
+
+Los datos sociales son simulados: Las menciones y engagement de TikTok, Instagram y YouTube fueron generados artificialmente basándose en las tendencias de reviews, pero sin una relación causal directa con los ratings individuales.
+Relación indirecta: El engagement en redes sociales influye en el volumen de reviews (correlación de 0.989), pero NO en el rating individual que cada persona da. Una persona puede ver un post viral pero igual darle 3 estrellas al producto.
+Muchas variables confundentes: El rating de un producto depende de calidad, precio, expectativas, tipo de piel, etc. - no solo de cuántos likes tiene en TikTok.
+
+Conclusión: El modelo confirma que las métricas de engagement social NO son buenos predictores del rating promedio de productos. Lo que SÍ predicen es el volumen de reviews (correlación 0.989).
+
+Modelo 2: Sentimiento → Rating
+
+R² Score: ~0.203 Moderado y útil
+Ecuación: Rating = 3.515 + 1.858 × Sentimiento
+
+Este modelo es más útil porque:
+
+- Explica el 20.3% de la variación: Por cada punto de aumento en el score de sentimiento, el rating aumenta ~1.86 puntos
+- 
+- Relación lógica: El análisis de sentimiento (VADER + TextBlob) captura el tono emocional del texto, que naturalmente está relacionado con el rating numérico
+- 
+- Consistencia del 77.2%: Como vimos en las métricas de calidad, hay buena consistencia entre sentimiento y rating
+
+El sentimiento captura el tono del texto, pero el rating también incluye:
+
+- Expectativas previas del usuario
+- Comparación con otros productos similares
+- Aspectos específicos (precio, empaque, durabilidad)
+
+Una review puede ser emocionalmente neutral pero dar 5 estrellas: "El producto funciona. Lo recomiendo."
+
+Recomendaciones para mejorar los modelos:
+
+- Agregar más features: Precio, categoría, longitud de review, temporada
+- Usar modelos más complejos: Random Forest, XGBoost, redes neuronales
+- Datos reales de APIs: El script de Twitter ya está listo, agregar TikTok/Instagram
+
 
 ---
 
