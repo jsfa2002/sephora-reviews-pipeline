@@ -66,9 +66,9 @@ El sistema incluye recolección REAL de datos de Twitter usando la API oficial v
 - Obtén un Bearer Token GRATIS en Twitter Developer Portal
 
 - Crea un archivo .env en la raíz del proyecto:
-
+```bash
 TWITTER_BEARER_TOKEN="tu_token_aqui"
-
+```
 El pipeline detecta automáticamente si hay token válido y usa datos reales
 
 **Métricas recolectadas de Twitter:**
@@ -100,49 +100,8 @@ Lo que se encuentra al principio en el dashboard ahora:
 
 ## Cómo está organizado el sistema
 
-SEPHORA-REVIEWS-PIPELINE/
-│
-├── config/
-│   └── pipeline_config.yaml          Configuración del sistema
-│
-├── data/
-│   ├── raw/                           Tus datos originales (no se sube a Git)
-│   │   ├── reviews_*.csv
-│   │   └── product_info.csv
-│   └── processed/                     Datos ya procesados (no se sube a Git)
-│       ├── reviews_processed.parquet
-│       ├── social_media_data.parquet
-│       ├── twitter_data_YYYYMMDD.parquet
-│       ├── correlation_report.txt
-│       └── validation_report.txt
-│
-├── src/
-│   ├── data_ingestion.py             Carga y junta los datos
-│   ├── data_transformation.py        Limpia y analiza sentimientos
-│   ├── social_ingestion.py           Crea datos de redes sociales
-│   ├── twitter_integration.py        Integración con Twitter API
-│   ├── correlation_analysis.py       Calcula correlaciones
-│   ├── data_validation.py            Verifica calidad
-│   ├── orchestrator.py               Corre todo el pipeline
-│   └── dashboard.py                  El dashboard visual
-│
-├── tests/
-│   └── test_pipeline.py              Tests automáticos
-│
-├── docs/
-│   ├── pipeline_diagram.md           Diagramas del sistema
-│   └── dependencies.md               Info técnica de librerías
-│
-├── .github/
-│   └── workflows/
-│       └── ci-cd.yml                 GitHub Actions
-│
-├── .env                              Variables de entorno (no se sube a Git)
-├── .gitignore                        Archivos ignorados por Git
-├── README.md                         Este archivo que estás leyendo
-├── requirements.txt                  Lista de librerías
-├── install_quick.py                  Script de instalación
-└── pipeline_execution.log            Registro de lo que hace el sistema
+
+
 
 Aquí está el diagrama de cómo funciona el pipeline completo:
 
@@ -161,7 +120,7 @@ Aquí está el diagrama de cómo funciona el pipeline completo:
 
 **Paso 5 - Clustering**: Agrupamos a los usuarios que se comportan de forma similar, por ejemplo, están los que siempre dan 5 estrellas y los que son más críticos.
 
-**Paso 6 - Redes sociales**: Generamos datos simulados de TikTok, Instagram y YouTube que están relacionados con las reseñas reales.
+**Paso 6 - Redes sociales**: Generamos datos simulados de TikTok, Instagram y YouTube que están relacionados con las reseñas reales y además de twiter que esta conectada a un api, estos si son datos reales, y en dado caso de que no se haga así, son simulados para no cortar el flujo ni el despliegue del dashboard.
 
 **Paso 7 - Correlación**: Aquí se mide qué tan relacionadas están las menciones en redes sociales con las reseñas. 
 
@@ -280,42 +239,47 @@ Así está organizada la carpeta del proyecto:
 SEPHORA-REVIEWS-PIPELINE/
 │
 ├── config/
-│   └── pipeline_config.yaml          Configuración del sistema
+│   └── pipeline_config.yaml          # Configuración del sistema
 │
 ├── data/
-│   ├── raw/                           Tus datos originales (no se sube a Git)
+│   ├── raw/                           # Tus datos originales (no se sube a Git)
 │   │   ├── reviews_*.csv
 │   │   └── product_info.csv
-│   └── processed/                     Datos ya procesados (no se sube a Git)
+│   └── processed/                     # Datos ya procesados (no se sube a Git)
 │       ├── reviews_processed.parquet
 │       ├── social_media_data.parquet
+│       ├── twitter_data_YYYYMMDD.parquet
 │       ├── correlation_report.txt
 │       └── validation_report.txt
 │
 ├── src/
-│   ├── data_ingestion.py             Carga y junta los datos
-│   ├── data_transformation.py        Limpia y analiza sentimientos
-│   ├── social_ingestion.py           Crea datos de redes sociales
-│   ├── correlation_analysis.py       Calcula correlaciones
-│   ├── data_validation.py            Verifica calidad
-│   ├── orchestrator.py               Corre todo el pipeline
-│   └── dashboard.py                  El dashboard visual
+│   ├── data_ingestion.py             # Carga y junta los datos
+│   ├── data_transformation.py        # Limpia y analiza sentimientos
+│   ├── social_ingestion.py           # Crea datos de redes sociales
+│   ├── twitter_integration.py        # Integración con Twitter API
+│   ├── correlation_analysis.py       # Calcula correlaciones
+│   ├── data_validation.py            # Verifica calidad
+│   ├── orchestrator.py               # Corre todo el pipeline
+│   └── dashboard.py                  # El dashboard visual
 │
 ├── tests/
-│   └── test_pipeline.py              Tests automáticos
+│   └── test_pipeline.py              # Tests automáticos
 │
 ├── docs/
-│   ├── pipeline_diagram.md           Diagramas del sistema
-│   └── dependencies.md               Info técnica de librerías
+│   ├── pipeline_diagram.md           # Diagramas del sistema
+│   └── dependencies.md               # Info técnica de librerías
 │
 ├── .github/
 │   └── workflows/
-│       └── ci-cd.yml                 GitHub Actions
+│       └── ci-cd.yml                 # GitHub Actions
 │
-├── README.md                         Este archivo que estás leyendo
-├── requirements.txt                  Lista de librerías
-├── install_quick.py                  Script de instalación
-└── pipeline_execution.log            Registro de lo que hace el sistema
+├── .env                              # Variables de entorno (no se sube a Git)
+├── .gitignore                        # Archivos ignorados por Git
+├── README.md                         # Este archivo que estás leyendo
+├── requirements.txt                  # Lista de librerías
+├── install_quick.py                  # Script de instalación
+└── pipeline_execution.log            # Registro de lo que hace el sistema
+
 ```
 <img width="289" height="556" alt="image" src="https://github.com/user-attachments/assets/ebb95ae8-cd90-45d0-9808-db6e5369ca31" />
 
