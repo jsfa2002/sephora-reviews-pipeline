@@ -100,6 +100,50 @@ Lo que se encuentra al principio en el dashboard ahora:
 
 ## Cómo está organizado el sistema
 
+SEPHORA-REVIEWS-PIPELINE/
+│
+├── config/
+│   └── pipeline_config.yaml          Configuración del sistema
+│
+├── data/
+│   ├── raw/                           Tus datos originales (no se sube a Git)
+│   │   ├── reviews_*.csv
+│   │   └── product_info.csv
+│   └── processed/                     Datos ya procesados (no se sube a Git)
+│       ├── reviews_processed.parquet
+│       ├── social_media_data.parquet
+│       ├── twitter_data_YYYYMMDD.parquet
+│       ├── correlation_report.txt
+│       └── validation_report.txt
+│
+├── src/
+│   ├── data_ingestion.py             Carga y junta los datos
+│   ├── data_transformation.py        Limpia y analiza sentimientos
+│   ├── social_ingestion.py           Crea datos de redes sociales
+│   ├── twitter_integration.py        Integración con Twitter API
+│   ├── correlation_analysis.py       Calcula correlaciones
+│   ├── data_validation.py            Verifica calidad
+│   ├── orchestrator.py               Corre todo el pipeline
+│   └── dashboard.py                  El dashboard visual
+│
+├── tests/
+│   └── test_pipeline.py              Tests automáticos
+│
+├── docs/
+│   ├── pipeline_diagram.md           Diagramas del sistema
+│   └── dependencies.md               Info técnica de librerías
+│
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml                 GitHub Actions
+│
+├── .env                              Variables de entorno (no se sube a Git)
+├── .gitignore                        Archivos ignorados por Git
+├── README.md                         Este archivo que estás leyendo
+├── requirements.txt                  Lista de librerías
+├── install_quick.py                  Script de instalación
+└── pipeline_execution.log            Registro de lo que hace el sistema
+
 Aquí está el diagrama de cómo funciona el pipeline completo:
 
 <img width="1843" height="110" alt="image" src="https://github.com/user-attachments/assets/0cc99a24-cb0d-4af5-b077-dacd38ef6477" />
